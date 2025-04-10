@@ -1,18 +1,91 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
+h1, h2 {
+    text-align: center;
     color: #333;
 }
 
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
 form {
-    margin-top: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 input, select, button {
-    margin: 5px;
+    width: 100%;
     padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Image and Button Styling for Chart */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+button {
+    margin: 20px 0;
 }
