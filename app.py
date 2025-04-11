@@ -145,5 +145,10 @@ def download_pdf():
         "Content-Disposition": "attachment; filename=transaction_history.pdf"
     })
 
+@app.route('/')
+def home():
+    return redirect(url_for('show_transactions'))
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=5000)
