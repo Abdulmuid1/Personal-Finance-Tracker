@@ -145,6 +145,7 @@ def download_pdf():
         "Content-Disposition": "attachment; filename=transaction_history.pdf"
     })
 
+#Navigate straight to the transaction homepage
 @app.route('/')
 def home():
     return redirect(url_for('show_transactions'))
