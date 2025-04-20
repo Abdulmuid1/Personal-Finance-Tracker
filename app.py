@@ -12,13 +12,13 @@ db = Database_Manager()
 @app.route('/transactions', methods=['GET'])
 def show_transactions():
     '''
-    This function handles filtering transactions by category or a date range.
+    This function filters and shows transactions by category or by a date interval.
     '''
     category = request.args.get('category')  # Get category from URL (if provided)
     start_date = request.args.get('start_date')  # Get start date from URL
     end_date = request.args.get('end_date')  # Get end date from URL
 
-    if category:  
+    if category:  # Filter by category
         transactions = db.get_transactions_by_category(category)
     elif start_date and end_date:  # Only filter by date if both are provided
         transactions = db.get_transactions_by_date(start_date, end_date)
@@ -51,8 +51,8 @@ def add_transaction():
 def show_charts():
     '''
     This function generates a bar chart of expenses by category.
-    - It retrieves all transactions from the database.
-    - It creates a bar chart and returns it as an image.
+    It retrieves all transactions from the database.
+    It creates a bar chart and returns it as an image.
     '''
     # Get all transactions
     transactions = db.get_transactions()
@@ -145,7 +145,7 @@ def download_pdf():
         "Content-Disposition": "attachment; filename=transaction_history.pdf"
     })
 
-#Navigate straight to the transaction homepage
+# Navigate straight to the transaction homepage
 @app.route('/')
 def home():
     return redirect(url_for('show_transactions'))

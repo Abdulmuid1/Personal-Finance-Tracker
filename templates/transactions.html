@@ -8,7 +8,7 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 
     <div>
-        <!-- Button to Download PDF -->
+        <!-- Button to show the expenses charts-->
         <a href="{{ url_for('show_charts', category=request.args.get('category'), start_date=request.args.get('start_date'), end_date=request.args.get('end_date')) }}">
             <button>View Expenses by Category Chart</button>
         </a>
@@ -31,7 +31,7 @@
 <body>
     <h1>Transaction History</h1>
 
-    <!-- FILTER FORM -->
+    <!-- Filter Form -->
     <form action="/transactions" method="GET">
         <label for="category">Filter by Category:</label>
         <select name="category" id="category" onchange="toggleOtherCategory()">
@@ -57,7 +57,7 @@
 
     <hr>
 
-    <!-- ADD TRANSACTION FORM -->
+    <!-- Transaction Form -->
     <h2>Add Transaction</h2>
     <form action="/add_transaction" method="POST">
         <label for="amount">Amount:</label>
@@ -90,7 +90,7 @@
 
     <hr>
 
-    <!-- Displaying Transactions -->
+    <!-- Display Transactions -->
     <h2>All Transactions</h2>
     <table border="1">
         <thead>
@@ -121,6 +121,7 @@
         <button>Download PDF</button>
     </a>
 </div>
+    <!-- Link to redirect back to the homepage -->
     <a href="/">Back to Home</a>
 </body>
 </html>

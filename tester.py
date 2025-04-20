@@ -1,3 +1,4 @@
+# Just a tester to test the database
 from database import Database_Manager
 
 # Create a database manager object

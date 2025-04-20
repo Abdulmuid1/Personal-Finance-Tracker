@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Example of how you could handle a category filter dynamically:
+    // Handle the category filter dynamically:
     const filterButton = document.getElementById('filter-button');
     filterButton.addEventListener('click', function() {
         const category = document.getElementById('category').value;
@@ -8,6 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const url = `/transactions?category=${category}&start_date=${startDate}&end_date=${endDate}`;
 
-        window.location.href = url; // Redirect with filter params
+        window.location.href = url; // Redirect with filter parameters
     });
 });
