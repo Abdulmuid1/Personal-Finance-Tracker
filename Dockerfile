@@ -13,7 +13,7 @@ WORKDIR /app
 # Copy the requirements first
 COPY requirements.txt .
 
-#  Use pre-built wheels instead of building from source
+# Use pre-built wheels instead of building from source
 RUN pip install --upgrade pip setuptools wheel
 
 # Install dependencies from requirements.txt
