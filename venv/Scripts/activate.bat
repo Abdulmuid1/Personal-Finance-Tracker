@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\olani\OneDrive\finance_tracker\venv
+set VIRTUAL_ENV=C:\Users\olani\OneDrive\Documents\My_Projects\Personal-Finance-Tracker\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
