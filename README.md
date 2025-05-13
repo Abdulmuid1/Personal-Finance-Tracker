@@ -1,6 +1,6 @@
 # Personal Finance Tracker
 
-A lightweight, web-based finance tracker built with Flask that helps users manage their daily expenses. Add, filter, categorize, and visualize transactions — and export them as a PDF report.
+A lightweight, web-based finance tracker built with Flask that helps users manage their daily expenses. One can add, filter, categorize, and visualize transactions, and also export them as a PDF report.
 
 ---
 
